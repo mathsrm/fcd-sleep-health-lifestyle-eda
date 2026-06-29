@@ -1,11 +1,11 @@
-# Report
+# Relatório
 
-This folder contains the final report exported from Overleaf.
+Esta pasta contém o relatório final do trabalho, exportado a partir do Overleaf.
 
-File:
+Arquivo:
 
 ```text
-Relatorio_Overleaf.pdf
+Relatorio_Final__FCD.pdf
 ```
 
-The report presents the dataset description, preprocessing steps, exploratory visualizations, main descriptive results, limitations, and conclusion.
+O relatório apresenta a descrição da base de dados, as etapas de pré-processamento, as visualizações exploratórias, os principais resultados descritivos, as limitações da análise e a conclusão.
