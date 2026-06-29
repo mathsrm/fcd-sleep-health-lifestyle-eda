@@ -1,116 +1,164 @@
-# Sleep Health and Lifestyle EDA
+# Análise Exploratória de Indicadores de Sono, Saúde e Estilo de Vida
 
-This repository contains an **Exploratory Data Analysis (EDA)** project developed for the course **Fundamentos em Ciências de Dados**.
+Este repositório contém o trabalho prático da disciplina **Fundamentos em Ciências de Dados**, desenvolvido com o objetivo de realizar uma análise exploratória da base **Sleep Health and Lifestyle Dataset**.
 
-The project explores the **Sleep Health and Lifestyle Dataset**, observing descriptive patterns and possible visual associations between variables related to sleep, health, and lifestyle.
+O projeto busca observar padrões descritivos e possíveis associações visuais entre variáveis relacionadas ao sono, saúde e estilo de vida, sem realizar inferência estatística, testes de hipótese ou análise causal.
 
-## Repository link
+## Base de dados
 
-https://github.com/mathsrn/fcd-sleep-health-lifestyle-eda
+A base utilizada foi a **Sleep Health and Lifestyle Dataset**, disponível publicamente na plataforma Kaggle.
 
-## Dataset
+Link da base: https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset
 
-The dataset used in this project is the **Sleep Health and Lifestyle Dataset**, available on Kaggle:
+A base contém informações sobre indivíduos e variáveis relacionadas a sono, hábitos de vida e indicadores de saúde, como:
 
-https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset
+* duração do sono;
+* qualidade do sono;
+* nível de estresse;
+* nível de atividade física;
+* categoria de IMC;
+* pressão arterial;
+* frequência cardíaca;
+* passos diários;
+* ocupação;
+* presença de distúrbios do sono.
 
-The dataset includes variables such as:
+## Objetivo do projeto
 
-- sleep duration;
-- quality of sleep;
-- stress level;
-- physical activity level;
-- BMI category;
-- blood pressure;
-- heart rate;
-- daily steps;
-- occupation;
-- sleep disorder status.
+O objetivo deste trabalho é realizar uma análise exploratória dos dados, buscando observar distribuições, comparar grupos e identificar possíveis padrões na base analisada.
 
-Both the original dataset and the treated dataset are available in this repository:
+As principais perguntas exploratórias consideradas foram:
 
-```text
-data/raw/Sleep_health_and_lifestyle_dataset.csv
-data/processed/sleep_health_lifestyle_dataset_treated.csv
-```
+* Como se distribuem a duração e a qualidade do sono na base analisada?
+* A qualidade do sono apresenta diferenças visuais entre categorias de IMC?
+* O nível de estresse apresenta algum padrão visual em relação à qualidade do sono?
+* A duração do sono varia de forma descritiva entre diferentes ocupações?
+* Pessoas com e sem distúrbio do sono registrado apresentam diferenças descritivas em variáveis como estresse, frequência cardíaca e duração do sono?
 
-## Project objective
+## Descrição das pastas
 
-The objective is to perform an exploratory analysis of variables related to sleep, health, and lifestyle. The analysis focuses on questions such as:
+### `data/`
 
-- How are sleep duration and quality of sleep distributed?
-- Are there visual differences in quality of sleep between BMI categories?
-- Is there a visual pattern between stress level and quality of sleep?
-- Does sleep duration vary descriptively across occupations?
-- Are there descriptive differences between individuals with and without registered sleep disorders?
+Contém a base de dados original e a base tratada.
 
-## Repository structure
+* `raw/`: base original baixada do Kaggle.
+* `processed/`: base após o tratamento realizado no notebook.
 
-```text
-fcd-sleep-health-lifestyle-eda/
-│
-├── data/
-│   ├── raw/                      # Original dataset
-│   └── processed/                # Treated dataset
-│
-├── notebooks/
-│   └── analise_sono.ipynb        # Google Colab notebook
-│
-├── reports/
-│   └── Relatorio_Overleaf.pdf    # Final report exported from Overleaf
-│
-├── results/                      # Figures generated during the analysis
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
-```
+### `notebooks/`
 
-## Notebook
+Contém o notebook utilizado para realizar a análise exploratória dos dados.
 
-The analysis notebook is available at:
+Arquivo principal:
 
 ```text
-notebooks/analise_sono.ipynb
+analise_sono.ipynb
 ```
 
-After pushing this repository to GitHub, the notebook can be opened directly in Google Colab using:
+### `reports/`
 
-https://colab.research.google.com/github/mathsrn/fcd-sleep-health-lifestyle-eda/blob/main/notebooks/analise_sono.ipynb
+Contém o relatório final do trabalho, elaborado em LaTeX no Overleaf e exportado em PDF.
 
-## Results
+Arquivo principal:
 
-The `results/` folder contains the figures generated in the exploratory analysis:
+```text
+Relatorio_Final__FCD.pdf
+```
 
-| File | Description |
-|---|---|
-| `sleep_duration_distribution.png` | Distribution of sleep duration |
-| `sleep_quality_frequency.png` | Frequency of quality of sleep levels |
-| `sleep_quality_by_bmi_category.png` | Quality of sleep by BMI category |
-| `stress_level_vs_sleep_quality.png` | Stress level versus quality of sleep |
-| `sleep_duration_by_occupation.png` | Sleep duration by occupation |
-| `sleep_disorder_by_bmi_category.png` | Sleep disorder status by BMI category |
-| `sleep_quality_by_sleep_disorder_status.png` | Quality of sleep by sleep disorder status |
+### `results/`
 
-## Tools used
+Contém os gráficos gerados durante a análise exploratória.
 
-- Python
-- Google Colab
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- LaTeX / Overleaf
-- GitHub
+## Etapas realizadas
 
-## Methodological note
+As principais etapas desenvolvidas no projeto foram:
 
-This project is exclusively exploratory. Therefore, the results should be interpreted as descriptive patterns observed in the analyzed dataset.
+1. Carregamento da base de dados;
+2. Inspeção inicial das variáveis;
+3. Verificação de valores ausentes;
+4. Tratamento da coluna `Sleep Disorder`;
+5. Verificação de duplicidades;
+6. Separação da variável `Blood Pressure` em pressão sistólica e diastólica;
+7. Construção de tabelas descritivas;
+8. Geração de gráficos exploratórios;
+9. Interpretação dos principais padrões observados;
+10. Discussão das limitações da análise.
 
-No statistical inference, hypothesis testing, predictive modeling, or causal analysis was performed.
+## Ferramentas utilizadas
 
-Expressions such as **observed**, **in the analyzed dataset**, **suggests**, and **possible associations** are used to avoid strong conclusions or causal interpretations.
+O projeto foi desenvolvido com as seguintes ferramentas:
 
-## Author
+* Python;
+* Google Colab;
+* Pandas;
+* NumPy;
+* Matplotlib;
+* Seaborn;
+* LaTeX;
+* Overleaf;
+* GitHub.
 
-- Matheus Sanches Raimundo Mendonça
+## Como executar o notebook
+
+Para reproduzir a análise:
+
+1. Baixe ou clone este repositório;
+2. Abra o arquivo `analise_sono.ipynb` no Google Colab ou Jupyter Notebook;
+3. Certifique-se de que a base de dados esteja disponível na pasta `data/raw/`;
+4. Execute as células do notebook na ordem apresentada.
+
+As bibliotecas necessárias estão listadas no arquivo `requirements.txt`.
+
+Para instalar as dependências em um ambiente local, utilize:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Observação metodológica
+
+Este projeto tem caráter exclusivamente exploratório. Portanto, os resultados apresentados devem ser interpretados como padrões observados na base analisada.
+
+Não foram realizados:
+
+* testes de hipótese;
+* intervalos de confiança;
+* modelos preditivos;
+* inferência estatística;
+* análise causal.
+
+Dessa forma, expressões como “observa-se”, “na base analisada”, “sugere-se” e “possíveis associações” são utilizadas para evitar conclusões fortes ou generalizações indevidas.
+
+## Principais visualizações
+
+A análise exploratória utilizou diferentes tipos de gráficos, incluindo:
+
+* histograma da duração do sono;
+* gráfico de barras da qualidade do sono;
+* boxplot da qualidade do sono por categoria de IMC;
+* gráfico de dispersão entre nível de estresse e qualidade do sono;
+* boxplot da duração do sono por ocupação;
+* gráfico de barras dos distúrbios do sono por categoria de IMC;
+* boxplot da qualidade do sono por presença de distúrbio registrado.
+
+## Relatório
+
+O relatório final está disponível na pasta `reports/`.
+
+Arquivo:
+
+```text
+Relatorio_Final__FCD.pdf
+```
+
+O relatório apresenta a descrição do problema, a origem dos dados, as etapas de preparação da base, a análise exploratória, os principais resultados observados, as limitações do estudo e a conclusão.
+
+## Autor
+
+Matheus Sanches Raimundo Mendonça
+
+## Disciplina
+
+**Fundamentos em Ciências de Dados**
+Instituto de Ciências Matemáticas e de Computação — ICMC
+Universidade de São Paulo — USP
+1º semestre de 2026
