@@ -1,11 +1,17 @@
 # Notebook
 
-This folder contains the notebook used to perform the exploratory data analysis.
+Esta pasta contém o notebook utilizado para realizar a análise exploratória dos dados.
 
-File:
+Arquivo:
 
 ```text
 analise_sono.ipynb
 ```
 
-To run the analysis in Google Colab, upload this notebook and execute the cells in order. The notebook uses the CSV file available in `data/raw/`.
+Para executar a análise no Google Colab, faça o upload deste notebook e execute as células na ordem apresentada. O notebook utiliza o arquivo CSV disponível na pasta:
+
+```text
+data/raw/
+```
+
+O notebook contém as etapas de carregamento da base, inspeção inicial, tratamento dos dados, criação de variáveis auxiliares, geração de tabelas descritivas e construção dos gráficos utilizados no relatório.
